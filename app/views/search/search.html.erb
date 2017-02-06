@@ -1,0 +1,16 @@
+<h1>Search Results</h1>
+
+<% if @articles %>
+<ul>
+  <% @articles.each do |article| %>
+    <li>
+      <h3>
+        <%= link_to article.title, controller: "articles", action: "show", id: article._id%>
+      </h3>
+      <p><%= article.text %></p>
+    </li>
+  <% end %>
+</ul>
+<% else %>
+  <p>Your search did not match any documents.</p>
+<% end %>
