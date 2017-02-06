@@ -1,24 +1,11 @@
-# README
+# Elastic Search at a glance
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I'm trying to learn Elastic Search Rails integration, this is a demo using it on top on a simple sqlite database.
 
-Things you may want to cover:
+I'm basically using [this useful article](https://code.tutsplus.com/articles/full-text-search-in-rails-using-elasticsearch--cms-22920).
 
-* Ruby version
+Gems used so far:
 
-* System dependencies
+- [elasticsearch-model](https://github.com/elastic/elasticsearch-rails/tree/master/elasticsearch-model): The elasticsearch-model library builds on top of the the elasticsearch library. It aims to simplify integration of Ruby classes ("models"), commonly found e.g. in Ruby on Rails applications, with the Elasticsearch search and analytics engine.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [elasticsearch-rails](https://github.com/elastic/elasticsearch-rails#elasticsearch): Multiple Elastic Search integrations. 
