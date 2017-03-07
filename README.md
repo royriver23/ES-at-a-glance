@@ -17,3 +17,25 @@ Reindexing using **SearchKick**:
 ```bash
 rake searchkick:reindex CLASS=Article
 ```
+
+## Chewy Notes
+
+Check documentation [here](https://github.com/toptal/chewy)
+
+### 1. Create Initializer in `config/initializers/chewy.rb`
+### 2. Create yml file in `config/chewy.yml`: 
+ 
+The prefix will be used for prefixing indices created along the way. For instance: `UsersIndex.index_name # => 'test_users'`
+
+### 3. Create an index inside `app/indices`
+  
+```
+class UsersIndex < Chewy::Index
+  define_type User.active # or just model instead_of scope: define_type User
+end
+```
+
+- **define_type:** basically all the elements that would be returned without any filter. In can includes multiple models associations:
+    `define_type User.active.includes(:country, :badges, :projects) do`
+
+### 4. 
